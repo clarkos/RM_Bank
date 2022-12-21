@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Routes, Route, Navigate } from "react-router-dom";
+import { MainNav } from "./layout/navBar";
+import { Home } from "./components/home";
+import { Profile } from "./components/profile";
+import { Contact } from "./components/contact";
+// import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<MainNav />}>
+        <Route index element={<Home />} />
+        <Route path="profile" element={<Profile />} />
+        <Route path="contact" element={<Contact />} />
+        {/* Using path="*"" means "match anything", 
+        so this route acts like a catch-all for URLs that we don't have explicit routes for. */}
+        <Route path="*" element={<Navigate replace to="/" />} />
+      </Route>
+    </Routes>
   );
 }
 

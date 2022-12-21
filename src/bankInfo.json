@@ -1,0 +1,41 @@
+{
+  "Accounts": [
+    {
+      "accountId": "",
+      "ownerId": "",
+      "balance": "",
+      "movements": [
+        {
+          "id": "",
+          "date": "",
+          "type": "",
+          "dueTo": "",
+          "state": "",
+          "detail": ""
+        }
+      ],
+      "haveLoans": [
+        {
+          "loanId": ""
+        }
+      ]
+    }
+  ],
+  "loans": [
+    {
+      "Id": "",
+      "adqAccount": "",
+      "status": "",
+      "adqDate": "",
+      "capital": "",
+      "interest": "",
+      "qttyOfPayments": "",
+      "balance": "",
+      "remaining": {
+        "remPayments": "",
+        "amount": "",
+        "expires": ""
+      }
+    }
+  ]
+}
