@@ -1,7 +1,7 @@
 import ModalDialog from 'react-bootstrap/ModalDialog'
 
-export const Transfers = () => {
+export const Withdraw = () => {
   return (
-    <div>transfers</div>
+    <div>Withdraws</div>
   )
 }

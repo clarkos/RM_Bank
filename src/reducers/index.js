@@ -1,43 +1,44 @@
-import { DEPOSIT, WITHDRAW, PAYMENT, TRANSFER, ALERT } from '../actions/index';
+//import { TRANSFER,
+//    DEPOSIT, 
+//    WITHDRAW, 
+//    PAYMENT, 
+import{   MOVEMENT } from "../actions/index";
 
 const initialState = {
-  movement: [],
-  detail: {},
+  detail: []
 };
 
 const rootReducer = (state = initialState, action) => {
   switch (action.type) {
-      case DEPOSIT:
-          return{
-              ...state,
-              houses: action.payload
-          };
+    case MOVEMENT:
+      return {
+        ...state,
+        // detail: [...state.movement, action.payload]
+        detail: [...state.detail, action.payload],
+      };
+    }
 
-      case WITHDRAW:
-          return{
-              ...state,
-              house: action.payload
-          };
-
-      case TRANSFER:
-          return{
-              ...state,
-              houses: [...state.houses, action.payload]
+/*     case WITHDRAW:
+      return {
+        ...state,
+        movement: [...state.movement, action.payload],
       };
 
-      case PAYMENT:
-          return{
-              ...state,
-              houses: state.houses.filter((e)=> e.id !== action.payload)
+    case TRANSFER:
+      return {
+        ...state,
+        movement: [...state.movement, action.payload],
       };
 
-      case ALERT:
-          return{
-              ...state,
-              houses: state.houses.filter((e)=> e.id !== action.payload)
+    case PAYMENT:
+      return {
+        ...state,
+        movement: [...state.movement, action.payload],
       };
-      default: return { ...state };
-  }
+
+    default:
+      return { ...state };
+  } */
 };
 
 export default rootReducer;
