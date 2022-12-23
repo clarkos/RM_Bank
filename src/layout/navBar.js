@@ -24,11 +24,17 @@ export const MainNav = () => {
               <Nav.Link as={Link} to="/">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="profile">
+              <Nav.Link as={Link} to="user">
                 Profile
               </Nav.Link>
               <Nav.Link as={Link} to="contact">
                 Contact
+              </Nav.Link>
+              <Nav.Link as={Link} to="register">
+                REGISTER
+              </Nav.Link>
+              <Nav.Link as={Link} to="login">
+                LOGIN
               </Nav.Link>
             </Nav>
           </Navbar.Collapse>

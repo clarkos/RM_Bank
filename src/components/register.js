@@ -3,7 +3,7 @@ import { Form } from "react-bootstrap";
 import { useAuth } from "../context/authContext";
 import { useNavigate } from "react-router-dom";
 
-export const Login = () => {
+export const Register = () => {
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -11,7 +11,7 @@ export const Login = () => {
 
   const [error, setError] = useState("");
 
-  const { login } = useAuth();
+  const { signup } = useAuth();
   const navigate = useNavigate();
 
   const handleChange = ({ target: { name, value } }) => {
@@ -21,7 +21,7 @@ export const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await login(user.email, user.password);
+      await signup(user.email, user.password);
       navigate("/");
     } catch (err) {
       setError(err.message);
@@ -30,7 +30,7 @@ export const Login = () => {
 
   return (
     <div className="container">
-      <h1>LogIn</h1>
+            <h1>Register</h1>
       <div className="alert">
         {error && <p>{error}</p>}
       </div>
