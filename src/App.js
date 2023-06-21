@@ -1,22 +1,21 @@
 import "./App.css";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { AuthProvider } from "./context/authContext";
-import { Register } from "./components/register";
-import { PrivateRoute } from "./components/privateRoute";
+import { PrivateRoute } from "./utils/privateRoute" ;
 import { MainNav } from "./layout/navBar";
 import { Home } from "./components/home";
 import { Profile } from "./components/profile";
 import { Contact } from "./components/contact";
 import { Footer } from "./layout/footer";
-import { Login } from "./components/login";
-import { AccountMovs } from "./components/accountMovs";
-import { Transfers } from "./components/transfers";
-import { Deposits } from "./components/deposits";
-import { Payments } from "./components/payments";
-import { Loans } from "./components/loans";
-import { Withdraw } from "./components/withdraw";
+import { Login } from "./components/loginRegister/login";
+import { AccountMovs } from "./components/account/accountMovs";
+import { MovDetail } from "./components/account/movDetail";
+import { Transfers } from "./components/operations/transfers";
+import { Deposits } from "./components/operations/deposits";
+import { Payments } from "./components/operations/payments";
+import { Withdraw } from "./components/operations/withdraw";
 import { NotFound } from "./components/notFound";
-import { MovDetail } from "./components/movDetail";
+import { Loans } from "./components/loans";
 
 function App() {
   return (

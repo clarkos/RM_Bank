@@ -1,7 +1,10 @@
-import { Button, Card, Col, Container, Row } from "react-bootstrap";
+import { Button, Card, Carousel, Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import promo from "../assets/banPromo.jpg";
 import b1 from "../assets/logo3.jpg";
+import banner1 from "../assets/banner1.jpg";
+import banner2 from "../assets/banner2.jpg";
+import banner3 from "../assets/banner3.jpg";
 
 export const Home = () => {
   return (
@@ -13,12 +16,51 @@ export const Home = () => {
             {"  "}
           </Col>
           <Col md="auto">
-            <h1>
+          <Carousel>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner1}
+          alt="First slide"
+        />
+        <Carousel.Caption>
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner3}
+          alt="Second slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="d-block w-100"
+          src={banner2}
+          alt="Third slide"
+        />
+
+        <Carousel.Caption>
+          <h3>Third slide label</h3>
+          <p>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+            {/* <h1>
               Welcome from{" "}
               <strong>
                 <em>Every Dimensions</em>
               </strong>
-            </h1>
+            </h1> */}
           </Col>
           <Col xs lg="2">
             {"  "}

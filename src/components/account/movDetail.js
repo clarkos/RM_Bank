@@ -1,4 +1,4 @@
-import data from "../bankInfo.json"
+import data from "../../bankInfo.json"
 import Form from 'react-bootstrap/Form';
 
 // export const MovDetail = ({account, id}) => {

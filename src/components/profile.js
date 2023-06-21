@@ -22,8 +22,8 @@ export const Profile = () => {
   return (
     <div className="container">
       <div className="profileHead">
-      <h3>Bienvenido {user.email}</h3>
-      <span onClick={handleLogout}>desconectarse</span>
+      <h3>Welcome {user.email}</h3>
+      <span onClick={handleLogout}>logOut</span>
       </div>
       <Tabs
         defaultActiveKey="data"

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form } from "react-bootstrap";
-import { useAuth } from "../context/authContext";
+import { useAuth } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
